@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func inverterSinal(numero int) int {
+	return numero * -1
+}
+
+func inverterSinalComPonteiro(numero *int) {
+	*numero = *numero * -1
+}
+
+func main() {
+	fmt.Println("Ponteiros")
+
+	numero := 20
+	numeroInvertido := inverterSinal(numero)
+
+	fmt.Println(numeroInvertido)
+	fmt.Println(numero)
+
+	inverterSinalComPonteiro(&numero)
+	fmt.Println(numero)
+}
